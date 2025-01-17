@@ -37,6 +37,7 @@ This is a standard React Next.js project. You can install the necessary modules 
 - You are free to explore any libraries and frameworks.
 - Keep the game lightweight; don't overcomplicate the implementation.
 - We would prefer a good game with just one screen over an average game with all three screens.
+- You can use design references from this document: [Commonly used modules](https://drive.google.com/file/d/1cHely2VYA7HXrjVtYUagfB_XY-70G01k/view?usp=sharing)
 - Submissions will be judged on the following criteria:
   - Code quality and modularity
   - Game design and functionality
