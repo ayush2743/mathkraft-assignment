@@ -21,6 +21,9 @@ This is a standard React Next.js project. You can install the necessary modules 
 - A responsive React web-based game
 - Built on top of the starter template provided
 - Use the Figma design as a reference
+- You can select either:
+  - Screen 1
+  - Screen 2 and 3 
 - Use the variables in the `game/game-state.tsx` file as the game state
 - Use the `game/state-utils.tsx` file to manage the game state
 - Stick to the screen and step structure in the `game/game-state.tsx` file. The screen notation is well defined in the Figma design, and you can use steps as needed to navigate through the game
