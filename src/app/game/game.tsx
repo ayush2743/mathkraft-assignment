@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
 import { useRef } from 'react';
-import FirstScreen from './screen/first';
-import SecondScreen from './screen/second';
+import FirstScreen from './screen/FirstScreen/first';
+import SecondScreen from './screen/SecodScreen/second';
 import { useGameState } from './state-utils';
 import { DevHelper } from './utils/helper';
-import ThirdScreen from './screen/third';
+import ThirdScreen from './screen/ThirdScreen/third';
 
 
 interface GameProps {
@@ -17,18 +17,16 @@ export default function Game({sendAdminMessage}: GameProps) {
   const { step: step1 } = gameStateRef.current.state1;
   const { step: step2 } = gameStateRef.current.state2;
   
-  const bottomRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    if (bottomRef.current) {
-      bottomRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
   }, [step1, step2]);
 
   return (
     <div className="mx-auto game font-jersey">
       <DevHelper />
       {/* Game screens */}
+
       {screen === 'first' && <FirstScreen />}
       {screen === 'second' && <SecondScreen />}
       {screen === 'third' && <ThirdScreen />}
@@ -41,7 +39,6 @@ export default function Game({sendAdminMessage}: GameProps) {
           }
         `}</style>
 
-      <div ref={bottomRef} style={{ height: 0 }} />
     </div>
   )
 }

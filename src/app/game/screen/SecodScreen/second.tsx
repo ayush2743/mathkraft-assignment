@@ -1,5 +1,5 @@
-import { useGameState } from '../state-utils';
-import Header from '../components/header';
+import { useGameState } from '../../state-utils';
+import Header from '../../components/header';
 
 export default function SecondScreen() {
   const { gameStateRef } = useGameState();
