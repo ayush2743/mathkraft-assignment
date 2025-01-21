@@ -11,10 +11,10 @@ export default function Screen1Step0() {
   return (
     <div className="mx-auto">
       <Heading text="Mixed number to improper fraction" />
-      <LevelBox mixedFraction={mixedFraction} />
+      <LevelBox text={"Level 1"}mixedFraction={mixedFraction} />
       <NextStepBox text="START >>" nextStep={() => {
         setGameStateRef({ ...gameStateRef.current, state1: { ...gameStateRef.current.state1, step: 1 } });
       }} />
     </div>
-  );
+  )
 }

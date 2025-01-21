@@ -2,13 +2,14 @@ import { MixedFraction } from '../game-state';
 
 interface HeaderProps {
   mixedFraction: MixedFraction;
+  text?: string;
 }
 
 
 const LevelBox = ({ mixedFraction }: HeaderProps) => {
   return (
     <div className='flex justify-center items-center m-[64px]'>
-      <div className="w-[745px] h-[253px] flex items-center justify-center bg-white text-[64px] font-normal">
+      <div className="w-[645px] lg:w-[745px] h-[253px] flex items-center justify-center bg-white text-[64px] font-normal">
         <div className="w-[253px] h-full bg-white border-[15px] flex items-center justify-center border-pink-500">
           <h2 className="text-pink-500">Level 1</h2>
         </div>

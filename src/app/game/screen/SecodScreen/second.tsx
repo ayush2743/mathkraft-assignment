@@ -1,15 +1,22 @@
 import { useGameState } from '../../state-utils';
-import Header from '../../components/header';
+import HomePage from './home';
+import Hints from './hints';
 
 export default function SecondScreen() {
-  const { gameStateRef } = useGameState();
-  const { step, mixedFraction } = gameStateRef.current.state2;
+  const { gameStateRef, setGameStateRef } = useGameState();
 
-  return (
-    <div className="mx-auto">
-      <Header mixedFraction={mixedFraction} />
-    </div>
-  )
+  if (gameStateRef.current.state2.step == 0) {
+    return (
+      <HomePage />
+    )
+  }
+
+  if (gameStateRef.current.state2.step >= 1) {
+    return (
+      <Hints/>
+    )
+  }
+
+
 }
-  
-  
+
